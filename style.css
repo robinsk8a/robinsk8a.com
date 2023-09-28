@@ -32,7 +32,7 @@ button {
     --dark-sec1: #0b8d8f;
     --dark-sec2: #006668;
     --light-prim1: #e6fcf5;
-    --light-prim2: #fb9200;
+    --light-prim2: hsl(35, 100%, 58%);
     --light-sec1: #FBB03B;
     --light-sec2: #ffcc7a;
     --text-indent: 1.2rem;
@@ -191,7 +191,6 @@ body {
     display: inline-block;
 }
 
-
 /* ABOUT */
 
 .about {
@@ -215,9 +214,68 @@ body {
     margin-top: 6rem;
     font-size: var(--heading-size);
     font-weight: var(--heading-weight);
-    color: var(--light-prim2);
+    color: var(--light-prim1);
     text-align: end;
 }
+
+/* PORTFOLIO */
+
+.portfolio-container {
+    padding: 2rem 6rem;
+    background-color: var(--dark-sec1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+.portfolio__image:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.portfolio__image:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.portfolio__image:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.portfolio__image:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+.portfolio__image:nth-child(5) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+.portfolio__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: var(--light-prim2);
+    border-radius: 1rem;
+}
+.portfolio__text {
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+.portfolio__heading {
+    font-size: var(--heading-size);
+    font-weight: var(--heading-weight)
+}
+
+
+/* CONTACT */
+
 .contact-container {
     height: 50rem;
     display: flex;
@@ -232,7 +290,7 @@ body {
     padding: 3rem 6rem;
 }
 .contact-form__label {
-    color: var(--light-sec2);
+    color: var(--light-prim2);
     font-weight: 700;
     margin-top: 1.4rem;
     margin-bottom: 1.2rem;
@@ -270,10 +328,11 @@ body {
     align-items: center;
 }
 .contact__oh {
-    font-size: 10rem;
+    font-size: 17rem;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 1rem;
+    margin-bottom: 3rem;
 }
 .contact__text {
     text-align: center;
@@ -285,6 +344,9 @@ body {
     font-weight: var(--heading-weight);
     color: var(--light-sec1);
 }
+
+/* FOOTER */
+
 .footer {
     background-color: var(--dark-sec2);
     padding: 4rem 18rem;
